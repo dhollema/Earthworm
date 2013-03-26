@@ -60,24 +60,9 @@
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ORMappingDeploy.exe" size="1608192">
       <assemblyIdentity name="ORMappingDeploy" version="1.8.6.11" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ESKf1tjXPIikeMydREXJuw+j6+U=</dsig:DigestValue>
-      </hash>
     </dependentAssembly>
   </dependency>
-  <file name="web_database.ico" size="67646">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>jgNRmcmUY0eyvyoClD0UmpJUrxU=</dsig:DigestValue>
-    </hash>
-  </file>
+  <file name="web_database.ico" size="67646" />
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
     <application>
       <!-- A list of all Windows versions that this application is designed to work with. Windows will automatically select the most compatible environment.-->
