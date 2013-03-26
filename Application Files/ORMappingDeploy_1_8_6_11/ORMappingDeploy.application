@@ -11,8 +11,15 @@
     <deploymentProvider codebase="http://jshirota.github.com/Earthworm/ORMappingDeploy.application" />
   </deployment>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Application Files\ORMappingDeploy_1_8_6_11\ORMappingDeploy.exe.manifest" size="4393">
+    <dependentAssembly dependencyType="install" codebase="Application Files\ORMappingDeploy_1_8_6_11\ORMappingDeploy.exe.manifest" size="5054">
       <assemblyIdentity name="ORMappingDeploy.exe" version="1.8.6.11" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Bn+E75/TSJcoPJSrizYr7Ckyj8o=</dsig:DigestValue>
+      </hash>
     </dependentAssembly>
   </dependency>
 </asmv1:assembly>
