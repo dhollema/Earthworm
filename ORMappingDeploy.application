@@ -14,7 +14,7 @@
     <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Application Files\ORMappingDeploy_1_8_7_3\ORMappingDeploy.exe.manifest" size="3946">
+    <dependentAssembly dependencyType="install" codebase="Application Files\ORMappingDeploy_1_8_7_3\ORMappingDeploy.exe.manifest" size="3931">
       <assemblyIdentity name="ORMappingDeploy.exe" version="1.8.7.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
     </dependentAssembly>
   </dependency>
