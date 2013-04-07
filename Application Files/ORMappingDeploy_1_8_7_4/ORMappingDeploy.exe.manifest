@@ -43,7 +43,7 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ORMappingDeploy.exe" size="2494976">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ORMappingDeploy.exe" size="2496000">
       <assemblyIdentity name="ORMappingDeploy" version="1.8.7.4" language="neutral" processorArchitecture="msil" />
     </dependentAssembly>
   </dependency>
