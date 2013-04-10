@@ -11,48 +11,36 @@
     <div class="wrapper">
         <h1 style="font-weight: 300">Earthworm - An ORM for Esri Geodatabase (via ArcObjects)</h1>
 
-        <p>*You will need ArcGIS Desktop, Engine or Server 9.3.1, 10.0, 10.1 or 10.2.</p>
+        <p>A simple .NET assembly that provides an object-relational mapping abstraction layer for geodatabase feature classes and tables. It converts features and rows into a (lazy) sequence of strongly-typed objects.</p>
 
         <br />
-        <br />
-        <br />
 
-        <h2 style="font-weight: 300">Step 1. &nbsp;Install.</h2>
         <p>
-            <a href="http://jshirota.github.com/Earthworm/ORMappingDeploy.application">
-                <img src="images/step1.png" style="border: none;"></a>
+            <a href="start.html">
+                <img src="images/screenshot.png" style="border: none;" title="Click to get started"></a>
         </p>
 
         <br />
-        <br />
-        <br />
 
-        <h2 style="font-weight: 300">Step 2. &nbsp;Drag and drop a file geodatabase folder (.gdb) onto the window.</h2>
-        <p>
-            <img src="images/step2.png" />
-        </p>
-
-        <br />
-        <br />
-        <br />
-
-        <h2 style="font-weight: 300">Step 3. &nbsp;Click the "Create" button.</h2>
-        <p>
-            <img src="images/step3.png" />
-        </p>
-
-        <br />
-        <br />
-        <br />
-
-        <h2 style="font-weight: 300">Step 4. &nbsp;Run it!</h2>
-        <p>
-            <img src="images/step4.png" />
-        </p>
-
-        <br />
-        <br />
-        <br />
+        <ul>
+            <li>Fights the impedance mismatch between geodatabase tables and OOP.</li>
+            <li>Does not get in the way of existing ArcObjects code. It is basically the same as using ICursor.</li>
+            <li>Works with Desktop ArcObjects, Addin, SOE and Engine applications.</li>
+            <li>Does not require any auto-generated code. No XML mapping files. No dependency on the IDE.</li>
+            <li>Supports CRUD operations with intuitive syntax.</li>
+            <li>Supports runtime "code first" methods for creating feature classes and tables based on defined types.</li>
+            <li>Respects all geodatabase behaviours such as versions, edit sessions, etc.</li>
+            <li>Works with anything that implements IFeatureClass or ITable (i.e. shapefiles, coverages). Note: The GUI tool only works with SDE, file and personal geodatabases.</li>
+            <li>Returns mapped objects as a lazy sequence implementing IEnumerable<t>. Allows for LINQ queries. Facilitates functional programming.</li>
+            <li>Encapsulates low-level ArcObjects "ceremony code" such as the cursor cleanup code.</li>
+            <li>Provides JSON serialization/deserialization compatible with ArcGIS REST API.</li>
+            <li>Provides KML serialization for geometries.</li>
+            <li>Enables common spatial operations and predicates as extension methods for IGeometry to avoid verbose interface casting code.</li>
+            <li>Provides class code generation for meta programming (i.e. code generation tools or runtime compilation via CodeDom or Roslyn). Supports C# and Visual Basic.</li>
+            <li>All mapped classes implement INotifyPropertyChanged (for use with WPF). All mapped properties automatically raise the PropertyChanged event upon property setter access (via IL weaving) without using an AOP library.</li>
+            <li>Acts as a download client for ArcGIS REST endpoints. Continuously downloads and yields features mapped to defined types, which can be immediately inserted into a feature class.</li>
+            <li>Completely free!</li>
+        </ul>
 
     </div>
 </body>
