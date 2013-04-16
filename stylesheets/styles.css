@@ -7,8 +7,22 @@ body
     color: #D1D1D1;
 }
 
+a
+{
+    color: #00ABA9;
+}
+
 .wrapper
 {
     width: 860px;
     margin: 0 auto;
+}
+
+@media print, screen and (max-width: 960px)
+{
+    div.wrapper
+    {
+        width: auto;
+        margin: 0;
+    }
 }
