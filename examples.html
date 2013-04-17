@@ -1,8 +1,152 @@
 ﻿<!doctype html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Earthworm - Code Examples</title>
+    <style type="text/css">
+        html
+        {
+            background: url(images/worm.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        pre
+        {
+            font-family: Consolas;
+            font-size: 16px;
+            color: black;
+            background: white;
+            opacity: 0.9;
+            filter: alpha(opacity=90);
+            padding: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="shortcut icon" href="images/web_database.ico" />
 </head>
 <body>
+
+    <div class="wrapper">
+        <span style="font-size: xx-large;">Earthworm - Code Examples</span>
+
+        <br />
+        <br />
+        <span style="font-size: x-large;">Mapping</span>
+
+        <p>Description goes here.</p>
+
+        <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">County</span>&nbsp;:&nbsp;<span style="color:#2b91af;">MappableFeature</span>
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;NAME&quot;</span>,&nbsp;32)]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;NAME&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;STATE_NAME&quot;</span>,&nbsp;25)]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;STATE_NAME&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;AREA&quot;</span>)]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">double</span>?&nbsp;AREA&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;POP2000&quot;</span>)]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">int</span>?&nbsp;POP2000&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;POP00_SQMI&quot;</span>)]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">double</span>?&nbsp;POP00_SQMI&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+
+        <br />
+        <span style="font-size: x-large;">Reading Objects</span>
+
+        <p>Description goes here.</p>
+
+        <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2b91af;">IFeatureClass</span>&nbsp;countyFeatureClass&nbsp;=&nbsp;featureWorkspace.OpenFeatureClass(<span style="color:#a31515;">&quot;COUNTIES&quot;</span>);
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">foreach</span>&nbsp;(<span style="color:#2b91af;">County</span>&nbsp;county&nbsp;<span style="color:blue;">in</span>&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;())
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2b91af;">Console</span>.WriteLine(county);
+&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+
+        <br />
+        <span style="font-size: x-large;">Laziness</span>
+
+        <p>Description goes here.</p>
+
+        <br />
+        <span style="font-size: x-large;">LINQ</span>
+
+        <p>Description goes here.</p>
+
+        <br />
+        <span style="font-size: x-large;">Insert</span>
+
+        <p>Description goes here.</p>
+
+        <br />
+        <span style="font-size: x-large;">Update</span>
+
+        <p>Description goes here.</p>
+
+        <br />
+        <span style="font-size: x-large;">Delete</span>
+
+        <p>Description goes here.</p>
+
+        <br />
+        <span style="font-size: x-large;">Edit Session</span>
+
+        <p>Description goes here.</p>
+
+        <br />
+        <span style="font-size: x-large;">Runtime Code First</span>
+
+        <p>Description goes here.</p>
+
+        <br />
+        <span style="font-size: x-large;">Schema Generation</span>
+
+        <p>Description goes here.</p>
+
+        <br />
+        <span style="font-size: x-large;">Geometry</span>
+
+        <p>Description goes here.</p>
+
+        <br />
+        <span style="font-size: x-large;">JSON</span>
+
+        <p>Description goes here.</p>
+
+        <br />
+        <span style="font-size: x-large;">KML</span>
+
+        <p>Description goes here.</p>
+
+        <br />
+        <span style="font-size: x-large;">Equality</span>
+
+        <p>Description goes here.</p>
+
+        <br />
+        <span style="font-size: x-large;">REST Client</span>
+
+        <p>Description goes here.</p>
+
+        <br />
+        <span style="font-size: x-large;">Property Change Notification</span>
+
+        <p>Description goes here.</p>
+
+        <br />
+        <span style="font-size: x-large;">Saving Field Names in Configuration Settings</span>
+
+        <p>Description goes here.</p>
+
+        <p style="text-align: center;">
+            <a href="index.html" style="font-size: large;">Main Page</a>
+        </p>
+    </div>
 </body>
 </html>
