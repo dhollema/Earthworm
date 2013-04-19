@@ -99,10 +99,25 @@
         <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">int</span>&nbsp;population&nbsp;=&nbsp;counties.Sum(c&nbsp;=&gt;&nbsp;c.Population);
 </pre>
 
+        <p>Description goes here.</p>
+
+        <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2b91af;">IEnumerable</span>&lt;<span style="color:#2b91af;">County</span>&gt;&nbsp;countiesInCalifornia&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">from</span>&nbsp;c&nbsp;<span style="color:blue;">in</span>&nbsp;counties
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">where</span>&nbsp;c.StateName&nbsp;==&nbsp;<span style="color:#a31515;">&quot;California&quot;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">select</span>&nbsp;c;</pre>
+
         <br />
         <span style="font-size: x-large;">Query Filter</span>
 
         <p>Description goes here.</p>
+
+        <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2b91af;">IEnumerable</span>&lt;<span style="color:#2b91af;">County</span>&gt;&nbsp;countiesInCalifornia&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;(<span style="color:#a31515;">&quot;STATE_NAME=&#39;California&#39;&quot;</span>);</pre>
+
+        <p>Description goes here.</p>
+
+        <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2b91af;">IEnumerable</span>&lt;<span style="color:#2b91af;">County</span>&gt;&nbsp;countiesInCalifornia&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;(<span style="color:#a31515;">&quot;STATE_NAME=&#39;California&#39;&quot;</span>,&nbsp;<span style="color:#a31515;">&quot;ORDER&nbsp;BY&nbsp;POP2000&quot;</span>);</pre>
 
         <br />
         <span style="font-size: x-large;">Insert</span>
