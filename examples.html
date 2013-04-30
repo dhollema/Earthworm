@@ -225,6 +225,54 @@ city.InsertInto(featureClass);</pre>
 
         <p>Description goes here.</p>
 
+        <pre><span style="color:#2b91af;">Console</span>.WriteLine(city);
+</pre>
+
+        <p>Description goes here.</p>
+
+        <pre><span style="color:#2b91af;">Console</span>.WriteLine(city.ToString(<span style="color:blue;">true</span>));
+</pre>
+
+        <p>Description goes here.</p>
+
+        <pre><span style="color:#2b91af;">Json</span>.SerializingFunction&nbsp;=&nbsp;o&nbsp;=&gt;&nbsp;<span style="color:#2b91af;">JsonConvert</span>.SerializeObject(o,&nbsp;<span style="color:#2b91af;">Formatting</span>.Indented);
+</pre>
+
+        <p>Description goes here.</p>
+
+        <pre><span style="color:#2b91af;">JsonPolygon</span>&nbsp;polygon&nbsp;=&nbsp;county.Shape.ToJsonGeometry()&nbsp;<span style="color:blue;">as</span>&nbsp;<span style="color:#2b91af;">JsonPolygon</span>;
+ 
+<span style="color:blue;">foreach</span>&nbsp;(<span style="color:blue;">double</span>[][]&nbsp;ring&nbsp;<span style="color:blue;">in</span>&nbsp;polygon.rings)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">foreach</span>&nbsp;(<span style="color:blue;">double</span>[]&nbsp;point&nbsp;<span style="color:blue;">in</span>&nbsp;ring)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2b91af;">Console</span>.WriteLine(<span style="color:#a31515;">&quot;{0},&nbsp;{1}&quot;</span>,&nbsp;point[0],&nbsp;point[1]);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre>
+
+        <p>Description goes here.</p>
+
+        <pre><span style="color:#2b91af;">IGeometry</span>&nbsp;shape&nbsp;=&nbsp;<span style="color:#2b91af;">JsonPolygon</span>.FromJson(json).ToEsriGeometry();
+</pre>
+
+        <p>Description goes here.</p>
+
+        <pre><span style="color:#2b91af;">Dictionary</span>&lt;<span style="color:blue;">string</span>,&nbsp;<span style="color:blue;">object</span>&gt;&nbsp;obj&nbsp;=&nbsp;city.ToDictionary(<span style="color:blue;">true</span>);
+</pre>
+
+        <p>Description goes here.</p>
+
+        <pre><span style="color:blue;">var</span>&nbsp;featureSet&nbsp;=&nbsp;<span style="color:blue;">new</span>
+{
+&nbsp;&nbsp;&nbsp;&nbsp;geometryType&nbsp;=&nbsp;<span style="color:#a31515;">&quot;esriGeometryPoint&quot;</span>,
+&nbsp;&nbsp;&nbsp;&nbsp;spatialReference&nbsp;=&nbsp;<span style="color:blue;">new</span>
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wkid&nbsp;=&nbsp;4326,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;latestWkid&nbsp;=&nbsp;4326
+&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;features&nbsp;=&nbsp;cityFeatureClass.Map&lt;<span style="color:#2b91af;">City</span>&gt;().Select(c&nbsp;=&gt;&nbsp;c.ToDictionary(<span style="color:blue;">true</span>))
+};</pre>
+
         <br />
         <span style="font-size: x-large;">KML</span>
 
@@ -267,10 +315,42 @@ kml.Save(<span style="color:#a31515;">&quot;C:\lakes.kml&quot;</span>)</pre>
 
         <p>Description goes here.</p>
 
+        <pre><span style="color:#2b91af;">County</span>&nbsp;county&nbsp;=&nbsp;countyFeatureClass.FindItemByOID&lt;<span style="color:#2b91af;">County</span>&gt;(123);
+ 
+county.PropertyChanged&nbsp;+=&nbsp;(s,&nbsp;e)&nbsp;=&gt;&nbsp;<span style="color:#2b91af;">Console</span>.WriteLine(<span style="color:#a31515;">&quot;{0}&nbsp;changed&quot;</span>,&nbsp;e.PropertyName);
+ 
+county.Population&nbsp;+=&nbsp;1;</pre>
+
         <br />
         <span style="font-size: x-large;">Saving Field Names in Configuration Settings</span>
 
         <p>Description goes here.</p>
+
+        <pre><span style="color:blue;">public</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">County</span>&nbsp;:&nbsp;<span style="color:#2b91af;">MappableFeature</span>
+{
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:blue;">typeof</span>(<span style="color:#2b91af;">Settings</span>),&nbsp;<span style="color:#a31515;">&quot;Counties_NAME&quot;</span>,&nbsp;32)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;Name&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:blue;">typeof</span>(<span style="color:#2b91af;">Settings</span>),&nbsp;<span style="color:#a31515;">&quot;Counties_STATE_NAME&quot;</span>,&nbsp;25)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;StateName&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:blue;">typeof</span>(<span style="color:#2b91af;">Settings</span>),&nbsp;<span style="color:#a31515;">&quot;Counties_POP2000&quot;</span>)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">int</span>&nbsp;Population&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+}</pre>
+
+        <p>Description goes here.</p>
+
+        <pre><span style="color:blue;">public</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">County</span>&nbsp;:&nbsp;<span style="color:#2b91af;">MappableFeature</span>
+{
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:blue;">typeof</span>(<span style="color:#2b91af;">ConfigurationManager</span>),&nbsp;<span style="color:#a31515;">&quot;Counties_NAME&quot;</span>,&nbsp;32)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;Name&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:blue;">typeof</span>(<span style="color:#2b91af;">ConfigurationManager</span>),&nbsp;<span style="color:#a31515;">&quot;Counties_STATE_NAME&quot;</span>,&nbsp;25)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;StateName&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:blue;">typeof</span>(<span style="color:#2b91af;">ConfigurationManager</span>),&nbsp;<span style="color:#a31515;">&quot;Counties_POP2000&quot;</span>)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">int</span>&nbsp;Population&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+}</pre>
 
         <p style="text-align: center;">
             <a href="index.html" style="font-size: large;">Main Page</a>
