@@ -174,6 +174,42 @@ city.InsertInto(featureClass);</pre>
 
         <p>Description goes here.</p>
 
+        <pre><span style="color:blue;">public</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">Volcano</span>&nbsp;:&nbsp;<span style="color:#2b91af;">MappableFeature</span>
+{
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;Name&quot;</span>)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;Name&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;LastErupted&quot;</span>)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;DateTime?&nbsp;LastErupted&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+}</pre>
+
+        <p>Description goes here.</p>
+
+        <pre><span style="color:#2b91af;">IFeatureClass</span>&nbsp;volcanoFeatureClass&nbsp;=&nbsp;featureWorkspace.CreateFeatureClass&lt;<span style="color:#2b91af;">Volcano</span>&gt;(
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a31515;">&quot;Volcanos&quot;</span>,&nbsp;<span style="color:#2b91af;">esriGeometryType</span>.esriGeometryPoint,&nbsp;4326);</pre>
+
+        <p>Description goes here.</p>
+
+        <pre><span style="color:blue;">public</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">Customer</span>&nbsp;:&nbsp;<span style="color:#2b91af;">MappableFeature</span>
+{
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;Name&quot;</span>,&nbsp;50)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;Name&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;Age&quot;</span>)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">int</span>?&nbsp;Age&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;Email&quot;</span>)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;Email&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;Picture&quot;</span>,&nbsp;50)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">byte</span>[]&nbsp;Picture&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+}</pre>
+
+        <p>Description goes here.</p>
+
+        <pre><span style="color:#2b91af;">ITable</span>&nbsp;customerTable&nbsp;=&nbsp;featureWorkspace.CreateTable&lt;<span style="color:#2b91af;">Customer</span>&gt;(<span style="color:#a31515;">&quot;Customers&quot;</span>);
+</pre>
+
         <br />
         <span style="font-size: x-large;">Schema Generation</span>
 
@@ -193,6 +229,28 @@ city.InsertInto(featureClass);</pre>
         <span style="font-size: x-large;">KML</span>
 
         <p>Description goes here.</p>
+
+        <pre><span style="color:blue;">Imports</span>&nbsp;&lt;<span style="color:#b96464;">xmlns</span><span style="color:#6464b9;">=</span><span style="color:#555555;">&quot;</span><span style="color:#6464b9;">http://www.opengis.net/kml/2.2</span><span style="color:#555555;">&quot;</span>&gt;</pre>
+
+        <p>Description goes here.</p>
+
+        <pre><span style="color:blue;">Dim</span>&nbsp;kml&nbsp;=&nbsp;<span style="color:#6464b9;">&lt;?</span><span style="color:#844646;">xml</span>&nbsp;<span style="color:#b96464;">version</span><span style="color:#6464b9;">=</span><span style="color:#555555;">&quot;</span><span style="color:#6464b9;">1.0</span><span style="color:#555555;">&quot;</span>&nbsp;<span style="color:#b96464;">encoding</span><span style="color:#6464b9;">=</span><span style="color:#555555;">&quot;</span><span style="color:#6464b9;">UTF-8</span><span style="color:#555555;">&quot;</span><span style="color:#6464b9;">?&gt;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6464b9;">&lt;</span><span style="color:#844646;">kml</span><span style="color:#6464b9;">&gt;</span>
+<span style="color:#555555;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#6464b9;">&lt;</span><span style="color:#844646;">Document</span><span style="color:#6464b9;">&gt;</span>
+<span style="color:#555555;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#6464b9;">&lt;</span><span style="color:#844646;">Style</span>&nbsp;<span style="color:#b96464;">id</span><span style="color:#6464b9;">=</span><span style="color:#555555;">&quot;</span><span style="color:#6464b9;">lake</span><span style="color:#555555;">&quot;</span><span style="color:#6464b9;">&gt;</span>
+<span style="color:#555555;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#6464b9;">&lt;</span><span style="color:#844646;">LineStyle</span><span style="color:#6464b9;">&gt;&lt;</span><span style="color:#844646;">color</span><span style="color:#6464b9;">&gt;</span><span style="color:#555555;">ff7f0000</span><span style="color:#6464b9;">&lt;/</span><span style="color:#844646;">color</span><span style="color:#6464b9;">&gt;&lt;/</span><span style="color:#844646;">LineStyle</span><span style="color:#6464b9;">&gt;</span>
+<span style="color:#555555;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#6464b9;">&lt;</span><span style="color:#844646;">PolyStyle</span><span style="color:#6464b9;">&gt;&lt;</span><span style="color:#844646;">color</span><span style="color:#6464b9;">&gt;</span><span style="color:#555555;">667f0000</span><span style="color:#6464b9;">&lt;/</span><span style="color:#844646;">color</span><span style="color:#6464b9;">&gt;&lt;/</span><span style="color:#844646;">PolyStyle</span><span style="color:#6464b9;">&gt;</span>
+<span style="color:#555555;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#6464b9;">&lt;/</span><span style="color:#844646;">Style</span><span style="color:#6464b9;">&gt;</span>
+<span style="color:#555555;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #555555; background: #fffebf;">&lt;%=</span>&nbsp;<span style="color:blue;">From</span>&nbsp;l&nbsp;<span style="color:blue;">In</span>&nbsp;lakeFeatureClass.Map(<span style="color:blue;">Of</span>&nbsp;<span style="color:#2b91af;">Lake</span>)()
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">Select</span>&nbsp;<span style="color:#6464b9;">&lt;</span><span style="color:#844646;">Placemark</span><span style="color:#6464b9;">&gt;</span>
+<span style="color:#555555;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#6464b9;">&lt;</span><span style="color:#844646;">name</span><span style="color:#6464b9;">&gt;</span><span style="color: #555555; background: #fffebf;">&lt;%=</span>&nbsp;l.NAME&nbsp;<span style="color: #555555; background: #fffebf;">%&gt;</span><span style="color:#6464b9;">&lt;/</span><span style="color:#844646;">name</span><span style="color:#6464b9;">&gt;</span>
+<span style="color:#555555;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#6464b9;">&lt;</span><span style="color:#844646;">styleUrl</span><span style="color:#6464b9;">&gt;</span><span style="color:#555555;">#lake</span><span style="color:#6464b9;">&lt;/</span><span style="color:#844646;">styleUrl</span><span style="color:#6464b9;">&gt;</span>
+<span style="color:#555555;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #555555; background: #fffebf;">&lt;%=</span>&nbsp;l.Shape.ToKml&nbsp;<span style="color: #555555; background: #fffebf;">%&gt;</span>
+<span style="color:#555555;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#6464b9;">&lt;/</span><span style="color:#844646;">Placemark</span><span style="color:#6464b9;">&gt;</span>&nbsp;<span style="color: #555555; background: #fffebf;">%&gt;</span>
+<span style="color:#555555;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#6464b9;">&lt;/</span><span style="color:#844646;">Document</span><span style="color:#6464b9;">&gt;</span>
+<span style="color:#555555;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#6464b9;">&lt;/</span><span style="color:#844646;">kml</span><span style="color:#6464b9;">&gt;</span>
+ 
+kml.Save(<span style="color:#a31515;">&quot;C:\lakes.kml&quot;</span>)</pre>
 
         <br />
         <span style="font-size: x-large;">Equality</span>
