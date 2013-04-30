@@ -23,6 +23,8 @@
             opacity: 0.9;
             filter: alpha(opacity=90);
             padding: 20px;
+            padding-left: 24px;
+            padding-right: 24px;
             word-wrap: break-word;
         }
     </style>
@@ -40,67 +42,67 @@
 
         <p>Description goes here.</p>
 
-        <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">County</span>&nbsp;:&nbsp;<span style="color:#2b91af;">MappableFeature</span>
-&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;NAME&quot;</span>,&nbsp;32)]
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;NAME&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+        <pre><span style="color:blue;">public</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">County</span>&nbsp;:&nbsp;<span style="color:#2b91af;">MappableFeature</span>
+{
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;NAME&quot;</span>,&nbsp;32)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;NAME&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;STATE_NAME&quot;</span>,&nbsp;25)]
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;STATE_NAME&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;STATE_NAME&quot;</span>,&nbsp;25)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;STATE_NAME&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;AREA&quot;</span>)]
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">double</span>?&nbsp;AREA&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;AREA&quot;</span>)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">double</span>?&nbsp;AREA&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;POP2000&quot;</span>)]
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">int</span>?&nbsp;POP2000&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;POP2000&quot;</span>)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">int</span>?&nbsp;POP2000&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;POP00_SQMI&quot;</span>)]
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">double</span>?&nbsp;POP00_SQMI&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;POP00_SQMI&quot;</span>)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">double</span>?&nbsp;POP00_SQMI&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+}</pre>
 
         <p>Description goes here.</p>
 
-        <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">County</span>&nbsp;:&nbsp;<span style="color:#2b91af;">MappableFeature</span>
-&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;NAME&quot;</span>,&nbsp;32)]
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;Name&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+        <pre><span style="color:blue;">public</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">County</span>&nbsp;:&nbsp;<span style="color:#2b91af;">MappableFeature</span>
+{
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;NAME&quot;</span>,&nbsp;32)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;Name&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;STATE_NAME&quot;</span>,&nbsp;25)]
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;StateName&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;STATE_NAME&quot;</span>,&nbsp;25)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;StateName&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;POP2000&quot;</span>)]
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">int</span>&nbsp;Population&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;POP2000&quot;</span>)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">int</span>&nbsp;Population&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+}</pre>
 
         <p>Description goes here.</p>
 
-        <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">City</span>&nbsp;:&nbsp;<span style="color:#2b91af;">MappableFeature</span>
-&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;AREANAME&quot;</span>,&nbsp;50)]
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;Name&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+        <pre><span style="color:blue;">public</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">City</span>&nbsp;:&nbsp;<span style="color:#2b91af;">MappableFeature</span>
+{
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;AREANAME&quot;</span>,&nbsp;50)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;Name&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;POP2000&quot;</span>)]
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">int</span>&nbsp;Population&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;POP2000&quot;</span>)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">int</span>&nbsp;Population&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+}</pre>
 
         <br />
         <span style="font-size: x-large;">Reading Objects</span>
 
         <p>Description goes here.</p>
 
-        <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2b91af;">IFeatureClass</span>&nbsp;countyFeatureClass&nbsp;=&nbsp;featureWorkspace.OpenFeatureClass(<span style="color:#a31515;">&quot;COUNTIES&quot;</span>);
+        <pre><span style="color:#2b91af;">IFeatureClass</span>&nbsp;countyFeatureClass&nbsp;=&nbsp;featureWorkspace.OpenFeatureClass(<span style="color:#a31515;">&quot;COUNTIES&quot;</span>);
  
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">foreach</span>&nbsp;(<span style="color:#2b91af;">County</span>&nbsp;county&nbsp;<span style="color:blue;">in</span>&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;())
-&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2b91af;">Console</span>.WriteLine(county);
-&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+<span style="color:blue;">foreach</span>&nbsp;(<span style="color:#2b91af;">County</span>&nbsp;county&nbsp;<span style="color:blue;">in</span>&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;())
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2b91af;">Console</span>.WriteLine(county);
+}</pre>
 
         <br />
         <span style="font-size: x-large;">Laziness</span>
 
         <p>Description goes here.</p>
 
-        <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2b91af;">IEnumerable</span>&lt;<span style="color:#2b91af;">County</span>&gt;&nbsp;counties&nbsp;=&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;();
+        <pre><span style="color:#2b91af;">IEnumerable</span>&lt;<span style="color:#2b91af;">County</span>&gt;&nbsp;counties&nbsp;=&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;();
 </pre>
 
         <br />
@@ -108,49 +110,49 @@
 
         <p>Description goes here.</p>
 
-        <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">int</span>&nbsp;population&nbsp;=&nbsp;counties.Sum(c&nbsp;=&gt;&nbsp;c.Population);
+        <pre><span style="color:blue;">int</span>&nbsp;population&nbsp;=&nbsp;counties.Sum(c&nbsp;=&gt;&nbsp;c.Population);
 </pre>
 
         <p>Description goes here.</p>
 
-        <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2b91af;">IEnumerable</span>&lt;<span style="color:#2b91af;">County</span>&gt;&nbsp;countiesInCalifornia&nbsp;=
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">from</span>&nbsp;c&nbsp;<span style="color:blue;">in</span>&nbsp;counties
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">where</span>&nbsp;c.StateName&nbsp;==&nbsp;<span style="color:#a31515;">&quot;California&quot;</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">select</span>&nbsp;c;</pre>
+        <pre><span style="color:#2b91af;">IEnumerable</span>&lt;<span style="color:#2b91af;">County</span>&gt;&nbsp;countiesInCalifornia&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">from</span>&nbsp;c&nbsp;<span style="color:blue;">in</span>&nbsp;counties
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">where</span>&nbsp;c.StateName&nbsp;==&nbsp;<span style="color:#a31515;">&quot;California&quot;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">select</span>&nbsp;c;</pre>
 
         <br />
         <span style="font-size: x-large;">Query Filter</span>
 
         <p>Description goes here.</p>
 
-        <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2b91af;">IEnumerable</span>&lt;<span style="color:#2b91af;">County</span>&gt;&nbsp;countiesInCalifornia&nbsp;=
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;(<span style="color:#a31515;">&quot;STATE_NAME=&#39;California&#39;&quot;</span>);</pre>
+        <pre><span style="color:#2b91af;">IEnumerable</span>&lt;<span style="color:#2b91af;">County</span>&gt;&nbsp;countiesInCalifornia&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;(<span style="color:#a31515;">&quot;STATE_NAME=&#39;California&#39;&quot;</span>);</pre>
 
         <p>Description goes here.</p>
 
-        <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2b91af;">IEnumerable</span>&lt;<span style="color:#2b91af;">County</span>&gt;&nbsp;countiesInCalifornia&nbsp;=
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;(<span style="color:#a31515;">&quot;STATE_NAME=&#39;California&#39;&quot;</span>,&nbsp;<span style="color:#a31515;">&quot;ORDER&nbsp;BY&nbsp;POP2000&nbsp;DESC&quot;</span>);</pre>
+        <pre><span style="color:#2b91af;">IEnumerable</span>&lt;<span style="color:#2b91af;">County</span>&gt;&nbsp;countiesInCalifornia&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;(<span style="color:#a31515;">&quot;STATE_NAME=&#39;California&#39;&quot;</span>,&nbsp;<span style="color:#a31515;">&quot;ORDER&nbsp;BY&nbsp;POP2000&nbsp;DESC&quot;</span>);</pre>
 
         <br />
         <span style="font-size: x-large;">Insert</span>
 
         <p>Description goes here.</p>
 
-        <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2b91af;">City</span>&nbsp;city&nbsp;=&nbsp;<span style="color:blue;">new</span>&nbsp;<span style="color:#2b91af;">City</span>
-&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;=&nbsp;<span style="color:#a31515;">&quot;Toronto&quot;</span>,
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Population&nbsp;=&nbsp;2600000,
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shape&nbsp;=&nbsp;<span style="color:blue;">new</span>&nbsp;<span style="color:#2b91af;">Point</span>&nbsp;{&nbsp;X&nbsp;=&nbsp;-79.4,&nbsp;Y&nbsp;=&nbsp;43.7&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;};
+        <pre><span style="color:#2b91af;">City</span>&nbsp;city&nbsp;=&nbsp;<span style="color:blue;">new</span>&nbsp;<span style="color:#2b91af;">City</span>
+{
+&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;=&nbsp;<span style="color:#a31515;">&quot;Toronto&quot;</span>,
+&nbsp;&nbsp;&nbsp;&nbsp;Population&nbsp;=&nbsp;2600000,
+&nbsp;&nbsp;&nbsp;&nbsp;Shape&nbsp;=&nbsp;<span style="color:blue;">new</span>&nbsp;<span style="color:#2b91af;">Point</span>&nbsp;{&nbsp;X&nbsp;=&nbsp;-79.4,&nbsp;Y&nbsp;=&nbsp;43.7&nbsp;}
+};
  
-&nbsp;&nbsp;&nbsp;&nbsp;city.InsertInto(featureClass);</pre>
+city.InsertInto(featureClass);</pre>
 
         <p>Description goes here.</p>
 
-        <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">foreach</span>&nbsp;(<span style="color:#2b91af;">County</span>&nbsp;county&nbsp;<span style="color:blue;">in</span>&nbsp;counties)
-&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;county.InsertInto(featureClass);
-&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+        <pre><span style="color:blue;">foreach</span>&nbsp;(<span style="color:#2b91af;">County</span>&nbsp;county&nbsp;<span style="color:blue;">in</span>&nbsp;counties)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;county.InsertInto(featureClass);
+}</pre>
 
         <br />
         <span style="font-size: x-large;">Update</span>
