@@ -267,8 +267,7 @@ city.InsertInto(featureClass);</pre>
 &nbsp;&nbsp;&nbsp;&nbsp;geometryType&nbsp;=&nbsp;<span style="color:#a31515;">&quot;esriGeometryPoint&quot;</span>,
 &nbsp;&nbsp;&nbsp;&nbsp;spatialReference&nbsp;=&nbsp;<span style="color:blue;">new</span>
 &nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wkid&nbsp;=&nbsp;4326,
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;latestWkid&nbsp;=&nbsp;4326
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wkid&nbsp;=&nbsp;4326
 &nbsp;&nbsp;&nbsp;&nbsp;},
 &nbsp;&nbsp;&nbsp;&nbsp;features&nbsp;=&nbsp;cityFeatureClass.Map&lt;<span style="color:#2b91af;">City</span>&gt;().Select(c&nbsp;=&gt;&nbsp;c.ToDictionary(<span style="color:blue;">true</span>))
 };</pre>
