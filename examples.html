@@ -16,12 +16,13 @@
 
         pre
         {
+            border: 2px solid #00ABA9;
             font-family: Consolas;
             font-size: 16px;
             color: black;
             background: white;
-            opacity: 0.9;
-            filter: alpha(opacity=90);
+            opacity: 0.8;
+            filter: alpha(opacity=80);
             padding: 20px;
             padding-left: 24px;
             padding-right: 24px;
@@ -159,15 +160,46 @@ city.InsertInto(featureClass);</pre>
 
         <p>Description goes here.</p>
 
+        <pre><span style="color:blue;">foreach</span>&nbsp;(<span style="color:#2b91af;">County</span>&nbsp;county&nbsp;<span style="color:blue;">in</span>&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;())
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">if</span>&nbsp;(county.StateName&nbsp;==&nbsp;<span style="color:#a31515;">&quot;New&nbsp;York&quot;</span>)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;county.Name&nbsp;=&nbsp;county.Name.ToUpper();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;county.Update();
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre>
+
         <br />
         <span style="font-size: x-large;">Delete</span>
 
         <p>Description goes here.</p>
 
+        <pre><span style="color:blue;">foreach</span>&nbsp;(<span style="color:#2b91af;">County</span>&nbsp;county&nbsp;<span style="color:blue;">in</span>&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;())
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">if</span>&nbsp;(county.Population&nbsp;&lt;&nbsp;1000000)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;county.Delete();
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre>
+
         <br />
         <span style="font-size: x-large;">Edit Session</span>
 
         <p>Description goes here.</p>
+
+        <pre><span style="color:blue;">bool</span>&nbsp;success&nbsp;=&nbsp;workspace.Edit(()&nbsp;=&gt;
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">foreach</span>&nbsp;(<span style="color:#2b91af;">County</span>&nbsp;county&nbsp;<span style="color:blue;">in</span>&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;())
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;county.Population&nbsp;=&nbsp;<span style="color:#2b91af;">Convert</span>.ToInt32(1.05&nbsp;*&nbsp;county.Population);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;county.Update();
+&nbsp;&nbsp;&nbsp;&nbsp;}
+});</pre>
+
+        <p>Description goes here.</p>
+
+        <pre><span style="color:#2b91af;">Exception</span>&nbsp;ex;
+workspace.Edit(UpdatePopulation,&nbsp;<span style="color:blue;">out</span>&nbsp;ex);</pre>
 
         <br />
         <span style="font-size: x-large;">Runtime Code First</span>
