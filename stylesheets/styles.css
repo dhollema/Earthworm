@@ -18,6 +18,32 @@ a
     margin: 0 auto;
 }
 
+dt
+{
+    font-size: x-large;
+    cursor: pointer;
+}
+
+dd
+{
+    margin: 0;
+}
+
+pre
+{
+    border: 2px solid #00ABA9;
+    font-family: Consolas;
+    font-size: 16px;
+    color: black;
+    background: white;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    padding: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    word-wrap: break-word;
+}
+
 @media print, screen and (max-width: 960px)
 {
     div.wrapper
