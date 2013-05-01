@@ -34,7 +34,6 @@
             <dd>
                 <div>
                     <p>Description goes here.</p>
-
                     <pre><span style="color:#2b91af;">IFeatureClass</span>&nbsp;countyFeatureClass&nbsp;=&nbsp;featureWorkspace.OpenFeatureClass(<span style="color:#a31515;">&quot;Counties&quot;</span>);
  
 <span style="color:blue;">foreach</span>&nbsp;(<span style="color:#2b91af;">County</span>&nbsp;county&nbsp;<span style="color:blue;">in</span>&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;())
@@ -47,7 +46,6 @@
             <dd>
                 <div>
                     <p>Description goes here.</p>
-
                     <pre><span style="color:blue;">public</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">County</span>&nbsp;:&nbsp;<span style="color:#2b91af;">MappableFeature</span>
 {
 &nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;NAME&quot;</span>,&nbsp;32)]
@@ -67,7 +65,6 @@
 }</pre>
 
                     <p>Description goes here.</p>
-
                     <pre><span style="color:blue;">public</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">County</span>&nbsp;:&nbsp;<span style="color:#2b91af;">MappableFeature</span>
 {
 &nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;NAME&quot;</span>,&nbsp;32)]
@@ -85,7 +82,6 @@
             <dd>
                 <div>
                     <p>Description goes here.</p>
-
                     <pre><span style="color:#2b91af;">IEnumerable</span>&lt;<span style="color:#2b91af;">County</span>&gt;&nbsp;counties&nbsp;=&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;();</pre>
                 </div>
             </dd>
@@ -93,11 +89,8 @@
             <dd>
                 <div>
                     <p>Description goes here.</p>
-
                     <pre><span style="color:blue;">int</span>&nbsp;population&nbsp;=&nbsp;counties.Sum(c&nbsp;=&gt;&nbsp;c.Population);</pre>
-
                     <p>Description goes here.</p>
-
                     <pre><span style="color:#2b91af;">IEnumerable</span>&lt;<span style="color:#2b91af;">County</span>&gt;&nbsp;countiesInCalifornia&nbsp;=
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">from</span>&nbsp;c&nbsp;<span style="color:blue;">in</span>&nbsp;counties
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">where</span>&nbsp;c.StateName&nbsp;==&nbsp;<span style="color:#a31515;">&quot;California&quot;</span>
@@ -108,12 +101,9 @@
             <dd>
                 <div>
                     <p>Description goes here.</p>
-
                     <pre><span style="color:#2b91af;">IEnumerable</span>&lt;<span style="color:#2b91af;">County</span>&gt;&nbsp;countiesInCalifornia&nbsp;=
 &nbsp;&nbsp;&nbsp;&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;(<span style="color:#a31515;">&quot;STATE_NAME=&#39;California&#39;&quot;</span>);</pre>
-
                     <p>Description goes here.</p>
-
                     <pre><span style="color:#2b91af;">IEnumerable</span>&lt;<span style="color:#2b91af;">County</span>&gt;&nbsp;countiesInCalifornia&nbsp;=
 &nbsp;&nbsp;&nbsp;&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;(<span style="color:#a31515;">&quot;STATE_NAME=&#39;California&#39;&quot;</span>,&nbsp;<span style="color:#a31515;">&quot;ORDER&nbsp;BY&nbsp;POP2000&nbsp;DESC&quot;</span>);</pre>
                 </div>
@@ -122,7 +112,6 @@
             <dd>
                 <div>
                     <p>Description goes here.</p>
-
                     <pre><span style="color:#2b91af;">City</span>&nbsp;city&nbsp;=&nbsp;<span style="color:blue;">new</span>&nbsp;<span style="color:#2b91af;">City</span>
 {
 &nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;=&nbsp;<span style="color:#a31515;">&quot;Toronto&quot;</span>,
@@ -131,9 +120,7 @@
 };
  
 city.InsertInto(featureClass);</pre>
-
                     <p>Description goes here.</p>
-
                     <pre><span style="color:blue;">foreach</span>&nbsp;(<span style="color:#2b91af;">County</span>&nbsp;county&nbsp;<span style="color:blue;">in</span>&nbsp;counties)
 {
 &nbsp;&nbsp;&nbsp;&nbsp;county.InsertInto(featureClass);
@@ -144,7 +131,6 @@ city.InsertInto(featureClass);</pre>
             <dd>
                 <div>
                     <p>Description goes here.</p>
-
                     <pre><span style="color:blue;">foreach</span>&nbsp;(<span style="color:#2b91af;">County</span>&nbsp;county&nbsp;<span style="color:blue;">in</span>&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;())
 {
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">if</span>&nbsp;(county.StateName&nbsp;==&nbsp;<span style="color:#a31515;">&quot;New&nbsp;York&quot;</span>)
@@ -159,7 +145,6 @@ city.InsertInto(featureClass);</pre>
             <dd>
                 <div>
                     <p>Description goes here.</p>
-
                     <pre><span style="color:blue;">foreach</span>&nbsp;(<span style="color:#2b91af;">County</span>&nbsp;county&nbsp;<span style="color:blue;">in</span>&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;())
 {
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">if</span>&nbsp;(county.Population&nbsp;&lt;&nbsp;1000000)
@@ -173,7 +158,6 @@ city.InsertInto(featureClass);</pre>
             <dd>
                 <div>
                     <p>Description goes here.</p>
-
                     <pre><span style="color:blue;">bool</span>&nbsp;success&nbsp;=&nbsp;workspace.Edit(()&nbsp;=&gt;
 {
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">foreach</span>&nbsp;(<span style="color:#2b91af;">County</span>&nbsp;county&nbsp;<span style="color:blue;">in</span>&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;())
@@ -182,9 +166,7 @@ city.InsertInto(featureClass);</pre>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;county.Update();
 &nbsp;&nbsp;&nbsp;&nbsp;}
 });</pre>
-
                     <p>Description goes here.</p>
-
                     <pre><span style="color:#2b91af;">Exception</span>&nbsp;ex;
 workspace.Edit(UpdatePopulation,&nbsp;<span style="color:blue;">out</span>&nbsp;ex);</pre>
                 </div>
@@ -193,7 +175,6 @@ workspace.Edit(UpdatePopulation,&nbsp;<span style="color:blue;">out</span>&nbsp;
             <dd>
                 <div>
                     <p>Description goes here.</p>
-
                     <pre><span style="color:blue;">public</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">Volcano</span>&nbsp;:&nbsp;<span style="color:#2b91af;">MappableFeature</span>
 {
 &nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;Name&quot;</span>)]
@@ -202,14 +183,10 @@ workspace.Edit(UpdatePopulation,&nbsp;<span style="color:blue;">out</span>&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;LastErupted&quot;</span>)]
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;DateTime?&nbsp;LastErupted&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
 }</pre>
-
                     <p>Description goes here.</p>
-
                     <pre><span style="color:#2b91af;">IFeatureClass</span>&nbsp;volcanoFeatureClass&nbsp;=&nbsp;featureWorkspace.CreateFeatureClass&lt;<span style="color:#2b91af;">Volcano</span>&gt;(
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a31515;">&quot;Volcanos&quot;</span>,&nbsp;<span style="color:#2b91af;">esriGeometryType</span>.esriGeometryPoint,&nbsp;4326);</pre>
-
                     <p>Description goes here.</p>
-
                     <pre><span style="color:blue;">public</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">Customer</span>&nbsp;:&nbsp;<span style="color:#2b91af;">MappableFeature</span>
 {
 &nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;Name&quot;</span>,&nbsp;50)]
@@ -224,9 +201,7 @@ workspace.Edit(UpdatePopulation,&nbsp;<span style="color:blue;">out</span>&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;Picture&quot;</span>)]
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">byte</span>[]&nbsp;Picture&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
 }</pre>
-
                     <p>Description goes here.</p>
-
                     <pre><span style="color:#2b91af;">ITable</span>&nbsp;customerTable&nbsp;=&nbsp;featureWorkspace.CreateTable&lt;<span style="color:#2b91af;">Customer</span>&gt;(<span style="color:#a31515;">&quot;Customers&quot;</span>);</pre>
                 </div>
             </dd>
@@ -234,6 +209,7 @@ workspace.Edit(UpdatePopulation,&nbsp;<span style="color:blue;">out</span>&nbsp;
             <dd>
                 <div>
                     <p>Description goes here.</p>
+                    <pre style="font-family: Consolas; font-size: 13; color: black; background: white;"><span style="color:blue;">string</span>&nbsp;code&nbsp;=&nbsp;airportFeatureClass.ToVB(<span style="color:#a31515;">&quot;MyNamespace&quot;</span>,&nbsp;<span style="color:#a31515;">&quot;Airport&quot;</span>);</pre>
                 </div>
             </dd>
             <dt>Geometry</dt>
@@ -246,19 +222,12 @@ workspace.Edit(UpdatePopulation,&nbsp;<span style="color:blue;">out</span>&nbsp;
             <dd>
                 <div>
                     <p>Description goes here.</p>
-
                     <pre><span style="color:#2b91af;">Console</span>.WriteLine(city);</pre>
-
                     <p>Description goes here.</p>
-
                     <pre><span style="color:#2b91af;">Console</span>.WriteLine(city.ToString(<span style="color:blue;">true</span>));</pre>
-
                     <p>Description goes here.</p>
-
                     <pre><span style="color:#2b91af;">Json</span>.SerializingFunction&nbsp;=&nbsp;o&nbsp;=&gt;&nbsp;<span style="color:#2b91af;">JsonConvert</span>.SerializeObject(o,&nbsp;<span style="color:#2b91af;">Formatting</span>.Indented);</pre>
-
                     <p>Description goes here.</p>
-
                     <pre><span style="color:#2b91af;">JsonPolygon</span>&nbsp;polygon&nbsp;=&nbsp;county.Shape.ToJsonGeometry()&nbsp;<span style="color:blue;">as</span>&nbsp;<span style="color:#2b91af;">JsonPolygon</span>;
  
 <span style="color:blue;">foreach</span>&nbsp;(<span style="color:blue;">double</span>[][]&nbsp;ring&nbsp;<span style="color:blue;">in</span>&nbsp;polygon.rings)
@@ -268,17 +237,11 @@ workspace.Edit(UpdatePopulation,&nbsp;<span style="color:blue;">out</span>&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2b91af;">Console</span>.WriteLine(<span style="color:#a31515;">&quot;{0},&nbsp;{1}&quot;</span>,&nbsp;point[0],&nbsp;point[1]);
 &nbsp;&nbsp;&nbsp;&nbsp;}
 }</pre>
-
                     <p>Description goes here.</p>
-
                     <pre><span style="color:#2b91af;">IGeometry</span>&nbsp;shape&nbsp;=&nbsp;<span style="color:#2b91af;">JsonPolygon</span>.FromJson(json).ToEsriGeometry();</pre>
-
                     <p>Description goes here.</p>
-
                     <pre><span style="color:#2b91af;">Dictionary</span>&lt;<span style="color:blue;">string</span>,&nbsp;<span style="color:blue;">object</span>&gt;&nbsp;obj&nbsp;=&nbsp;city.ToDictionary(<span style="color:blue;">true</span>);</pre>
-
                     <p>Description goes here.</p>
-
                     <pre><span style="color:blue;">var</span>&nbsp;featureSet&nbsp;=&nbsp;<span style="color:blue;">new</span>
 {
 &nbsp;&nbsp;&nbsp;&nbsp;geometryType&nbsp;=&nbsp;<span style="color:#a31515;">&quot;esriGeometryPoint&quot;</span>,
@@ -294,11 +257,8 @@ workspace.Edit(UpdatePopulation,&nbsp;<span style="color:blue;">out</span>&nbsp;
             <dd>
                 <div>
                     <p>Description goes here.</p>
-
                     <pre><span style="color:blue;">Imports</span>&nbsp;&lt;<span style="color:#b96464;">xmlns</span><span style="color:#6464b9;">=</span><span style="color:#555555;">&quot;</span><span style="color:#6464b9;">http://www.opengis.net/kml/2.2</span><span style="color:#555555;">&quot;</span>&gt;</pre>
-
                     <p>Description goes here.</p>
-
                     <pre><span style="color:blue;">Dim</span>&nbsp;kml&nbsp;=&nbsp;<span style="color:#6464b9;">&lt;?</span><span style="color:#844646;">xml</span>&nbsp;<span style="color:#b96464;">version</span><span style="color:#6464b9;">=</span><span style="color:#555555;">&quot;</span><span style="color:#6464b9;">1.0</span><span style="color:#555555;">&quot;</span>&nbsp;<span style="color:#b96464;">encoding</span><span style="color:#6464b9;">=</span><span style="color:#555555;">&quot;</span><span style="color:#6464b9;">UTF-8</span><span style="color:#555555;">&quot;</span><span style="color:#6464b9;">?&gt;</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6464b9;">&lt;</span><span style="color:#844646;">kml</span><span style="color:#6464b9;">&gt;</span>
 <span style="color:#555555;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#6464b9;">&lt;</span><span style="color:#844646;">Document</span><span style="color:#6464b9;">&gt;</span>
@@ -328,13 +288,30 @@ kml.Save(<span style="color:#a31515;">&quot;C:\lakes.kml&quot;</span>)</pre>
             <dd>
                 <div>
                     <p>Description goes here.</p>
+                    <pre><span style="color:blue;">public</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">TaxParcel</span>&nbsp;:&nbsp;<span style="color:#2b91af;">MappableFeature</span>
+{
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;PARCELID&quot;</span>,&nbsp;30)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;ParcelID&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;SITEADDRESS&quot;</span>,&nbsp;30)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;SiteAddress&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;CNTASSDVAL&quot;</span>)]
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">double</span>&nbsp;AssessedValue&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
+}</pre>
+                    <p>Description goes here.</p>
+                    <pre><span style="color:#2b91af;">FeatureSet</span>&nbsp;featureSet&nbsp;=&nbsp;<span style="color:blue;">new</span>&nbsp;<span style="color:#2b91af;">FeatureSet</span>(url);
+ 
+<span style="color:blue;">foreach</span>&nbsp;(<span style="color:#2b91af;">TaxParcel</span>&nbsp;parcel&nbsp;<span style="color:blue;">in</span>&nbsp;featureSet.Map&lt;<span style="color:#2b91af;">TaxParcel</span>&gt;())
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2b91af;">Console</span>.WriteLine(<span style="color:#a31515;">&quot;Parcel&nbsp;#{0}&nbsp;-&gt;&nbsp;${1}&quot;</span>,&nbsp;parcel.ParcelID,&nbsp;parcel.AssessedValue);
+}</pre>
                 </div>
             </dd>
             <dt>Property Change Notification</dt>
             <dd>
                 <div>
                     <p>Description goes here.</p>
-
                     <pre><span style="color:#2b91af;">County</span>&nbsp;county&nbsp;=&nbsp;countyFeatureClass.FindItemByOID&lt;<span style="color:#2b91af;">County</span>&gt;(123);
  
 county.PropertyChanged&nbsp;+=&nbsp;(s,&nbsp;e)&nbsp;=&gt;&nbsp;<span style="color:#2b91af;">Console</span>.WriteLine(<span style="color:#a31515;">&quot;{0}&nbsp;changed&quot;</span>,&nbsp;e.PropertyName);
@@ -352,7 +329,6 @@ county.Population&nbsp;+=&nbsp;1;</pre>
             <dd>
                 <div>
                     <p>Description goes here.</p>
-
                     <pre><span style="color:blue;">public</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">County</span>&nbsp;:&nbsp;<span style="color:#2b91af;">MappableFeature</span>
 {
 &nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:blue;">typeof</span>(<span style="color:#2b91af;">Settings</span>),&nbsp;<span style="color:#a31515;">&quot;County_Name&quot;</span>,&nbsp;32)]
@@ -364,9 +340,7 @@ county.Population&nbsp;+=&nbsp;1;</pre>
 &nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:blue;">typeof</span>(<span style="color:#2b91af;">Settings</span>),&nbsp;<span style="color:#a31515;">&quot;County_Population&quot;</span>)]
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">int</span>&nbsp;Population&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
 }</pre>
-
                     <p>Description goes here.</p>
-
                     <pre><span style="color:blue;">public</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">County</span>&nbsp;:&nbsp;<span style="color:#2b91af;">MappableFeature</span>
 {
 &nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:blue;">typeof</span>(<span style="color:#2b91af;">ConfigurationManager</span>),&nbsp;<span style="color:#a31515;">&quot;County_Name&quot;</span>,&nbsp;32)]
