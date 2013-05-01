@@ -79,17 +79,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;POP2000&quot;</span>)]
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">int</span>&nbsp;Population&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
 }</pre>
-
-                    <p>Description goes here.</p>
-
-                    <pre><span style="color:blue;">public</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">City</span>&nbsp;:&nbsp;<span style="color:#2b91af;">MappableFeature</span>
-{
-&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;AREANAME&quot;</span>,&nbsp;50)]
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">string</span>&nbsp;Name&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
- 
-&nbsp;&nbsp;&nbsp;&nbsp;[<span style="color:#2b91af;">MappedField</span>(<span style="color:#a31515;">&quot;POP2000&quot;</span>)]
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">virtual</span>&nbsp;<span style="color:blue;">int</span>&nbsp;Population&nbsp;{&nbsp;<span style="color:blue;">get</span>;&nbsp;<span style="color:blue;">set</span>;&nbsp;}
-}</pre>
                 </div>
             </dd>
             <dt>Laziness</dt>
@@ -97,8 +86,7 @@
                 <div>
                     <p>Description goes here.</p>
 
-                    <pre><span style="color:#2b91af;">IEnumerable</span>&lt;<span style="color:#2b91af;">County</span>&gt;&nbsp;counties&nbsp;=&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;();
-</pre>
+                    <pre><span style="color:#2b91af;">IEnumerable</span>&lt;<span style="color:#2b91af;">County</span>&gt;&nbsp;counties&nbsp;=&nbsp;countyFeatureClass.Map&lt;<span style="color:#2b91af;">County</span>&gt;();</pre>
                 </div>
             </dd>
             <dt>LINQ</dt>
@@ -106,8 +94,7 @@
                 <div>
                     <p>Description goes here.</p>
 
-                    <pre><span style="color:blue;">int</span>&nbsp;population&nbsp;=&nbsp;counties.Sum(c&nbsp;=&gt;&nbsp;c.Population);
-</pre>
+                    <pre><span style="color:blue;">int</span>&nbsp;population&nbsp;=&nbsp;counties.Sum(c&nbsp;=&gt;&nbsp;c.Population);</pre>
 
                     <p>Description goes here.</p>
 
@@ -240,8 +227,7 @@ workspace.Edit(UpdatePopulation,&nbsp;<span style="color:blue;">out</span>&nbsp;
 
                     <p>Description goes here.</p>
 
-                    <pre><span style="color:#2b91af;">ITable</span>&nbsp;customerTable&nbsp;=&nbsp;featureWorkspace.CreateTable&lt;<span style="color:#2b91af;">Customer</span>&gt;(<span style="color:#a31515;">&quot;Customers&quot;</span>);
-</pre>
+                    <pre><span style="color:#2b91af;">ITable</span>&nbsp;customerTable&nbsp;=&nbsp;featureWorkspace.CreateTable&lt;<span style="color:#2b91af;">Customer</span>&gt;(<span style="color:#a31515;">&quot;Customers&quot;</span>);</pre>
                 </div>
             </dd>
             <dt>Schema Generation</dt>
@@ -261,18 +247,15 @@ workspace.Edit(UpdatePopulation,&nbsp;<span style="color:blue;">out</span>&nbsp;
                 <div>
                     <p>Description goes here.</p>
 
-                    <pre><span style="color:#2b91af;">Console</span>.WriteLine(city);
-</pre>
+                    <pre><span style="color:#2b91af;">Console</span>.WriteLine(city);</pre>
 
                     <p>Description goes here.</p>
 
-                    <pre><span style="color:#2b91af;">Console</span>.WriteLine(city.ToString(<span style="color:blue;">true</span>));
-</pre>
+                    <pre><span style="color:#2b91af;">Console</span>.WriteLine(city.ToString(<span style="color:blue;">true</span>));</pre>
 
                     <p>Description goes here.</p>
 
-                    <pre><span style="color:#2b91af;">Json</span>.SerializingFunction&nbsp;=&nbsp;o&nbsp;=&gt;&nbsp;<span style="color:#2b91af;">JsonConvert</span>.SerializeObject(o,&nbsp;<span style="color:#2b91af;">Formatting</span>.Indented);
-</pre>
+                    <pre><span style="color:#2b91af;">Json</span>.SerializingFunction&nbsp;=&nbsp;o&nbsp;=&gt;&nbsp;<span style="color:#2b91af;">JsonConvert</span>.SerializeObject(o,&nbsp;<span style="color:#2b91af;">Formatting</span>.Indented);</pre>
 
                     <p>Description goes here.</p>
 
@@ -288,13 +271,11 @@ workspace.Edit(UpdatePopulation,&nbsp;<span style="color:blue;">out</span>&nbsp;
 
                     <p>Description goes here.</p>
 
-                    <pre><span style="color:#2b91af;">IGeometry</span>&nbsp;shape&nbsp;=&nbsp;<span style="color:#2b91af;">JsonPolygon</span>.FromJson(json).ToEsriGeometry();
-</pre>
+                    <pre><span style="color:#2b91af;">IGeometry</span>&nbsp;shape&nbsp;=&nbsp;<span style="color:#2b91af;">JsonPolygon</span>.FromJson(json).ToEsriGeometry();</pre>
 
                     <p>Description goes here.</p>
 
-                    <pre><span style="color:#2b91af;">Dictionary</span>&lt;<span style="color:blue;">string</span>,&nbsp;<span style="color:blue;">object</span>&gt;&nbsp;obj&nbsp;=&nbsp;city.ToDictionary(<span style="color:blue;">true</span>);
-</pre>
+                    <pre><span style="color:#2b91af;">Dictionary</span>&lt;<span style="color:blue;">string</span>,&nbsp;<span style="color:blue;">object</span>&gt;&nbsp;obj&nbsp;=&nbsp;city.ToDictionary(<span style="color:blue;">true</span>);</pre>
 
                     <p>Description goes here.</p>
 
